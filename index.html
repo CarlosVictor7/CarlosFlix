@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarlosFlix</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>CarlosFlix</h1>
+    </header>
+
+    <div class="videos">
+        <video id="video1" class="video" controls autoplay>
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        
+        <video id="video2" class="video" controls>
+            <source src="assets/videos/Download.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CarlosFlix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const video1 = document.getElementById("video1");
+        const video2 = document.getElementById("video2");
+
+        video1.addEventListener("ended", () => {
+            video2.play();
+        });
+    </script>
+</body>
+</html>
